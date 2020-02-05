@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 import os
 import dj_database_url
 from os import path
+
 if path.exists('env.py'):
     import env
 
@@ -34,7 +35,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = development
 
-ALLOWED_HOSTS = [os.environ.get('HOSTNAME', 'localhost')]
+ALLOWED_HOSTS = [os.environ.get('HOSTNAME'), 'localhost']
 
 host = os.environ.get('SITE_HOST')
 if host:
